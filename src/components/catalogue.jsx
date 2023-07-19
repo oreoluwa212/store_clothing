@@ -5,7 +5,7 @@ import img11 from "../assets/images/prodimg3.png";
 
 import img22 from "../assets/images/prodimg1.png";
 import img33 from "../assets/images/prodimg6.png";
-import img44 from "../assets/images/product-img4.png";
+import img44 from "../assets/images/product-img3.png";
 import img55 from "../assets/images/prodImg8.png";
 import img5 from "../assets/images/black.png";
 import img3 from "../assets/images/proImg2.png";
