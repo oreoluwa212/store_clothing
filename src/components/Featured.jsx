@@ -1,8 +1,8 @@
 import React from 'react';
-import img4 from "../assets/images/proImg2.png"
-import img5 from "../assets/images/prodimg6.png"
-import img6 from "../assets/images/prodimg3.png"
-import img8 from "../assets/images/prodImg8.png"
+import img4 from "../assets/images/img6.png"
+import img5 from "../assets/images/img7.png"
+import img6 from "../assets/images/img8.png"
+import img8 from "../assets/images/img3.png"
 import "../App"
 
 

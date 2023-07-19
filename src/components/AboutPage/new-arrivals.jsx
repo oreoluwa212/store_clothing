@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./about.css";
 import logo from "../../assets/images/logo.png";
-import owner from "../../assets/images/owner.png";
+
 
 const NewArrivals = () => {
   return (
