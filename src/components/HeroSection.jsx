@@ -1,5 +1,3 @@
-// import hero from '../assets/images/hero.png';
-
 import '../styles/PageStyles.scss';
 
 const HeroSection = () => {
@@ -9,7 +7,7 @@ const HeroSection = () => {
         <h1>ELEVATE YOUR WARDROBE</h1>
 
         <div className="elevate-sub">
-          <p className="Trendy">Shop Our Trendy Fashion</p>
+          <p className="trendy">Shop Our Trendy Fashion</p>
           <div>
             <button className="input-btn">Go to Catalog</button>
           </div>

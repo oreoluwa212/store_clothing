@@ -24,6 +24,11 @@
     justify-content: space-between;
     padding: 24px 100px;
     align-items: center;
+    transition: 850ms;
+
+    @media (max-width: 960px) {
+      display: none;
+    }
 
     .first,
     .second {
@@ -42,6 +47,63 @@
       font-size: 24px;
     }
   }
+
+  .mobile-nav-container {
+    display: none;
+
+    @media (max-width: 960px) {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 70px;
+      align-items: center;
+    }
+
+    @media (max-width: 598px) {
+      padding: 24px 50px;
+    }
+  }
+
+  .mobile-nav-items {
+    background: #24444e;
+    color: white;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: 850ms;
+    z-index: 1;
+    transform-origin: 350ms;
+    padding: 50px 20px;
+    align-items: center;
+    text-align: center;
+    transition: 850ms;
+
+    @media (max-width: 450px) {
+      width: 70%;
+      gap: 30px;
+    }
+
+    @media (max-width: 370px) {
+      width: 90%;
+    }
+
+    .first,
+    .second {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      text-align: center;
+      transition: 850ms;
+
+      @media (max-width: 450px) {
+        gap: 30px;
+      }
+    }
+  }
 }
 
 // Hero Section
@@ -56,6 +118,18 @@
   background-size: cover;
   justify-content: flex-end;
   padding-right: 80px;
+  transition: 850ms;
+
+  @media (max-width: 960px) {
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+    margin: 0 70px;
+  }
+
+  @media (max-width: 598px) {
+    margin: 50px;
+  }
 
   .elevate {
     display: flex;
@@ -65,15 +139,44 @@
     padding: 150px 80px;
     color: #f2f2f2;
     gap: 30px;
+    transition: 850ms;
+
+    @media (max-width: 960px) {
+      background-color: #24444e;
+      padding: 50px;
+    }
 
     h1 {
       font-weight: 400;
+      font-size: 24px;
+      transition: 850ms;
+
+      @media (max-width: 598px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 430px) {
+        font-size: 15px;
+      }
     }
 
     .elevate-sub {
       display: flex;
       flex-direction: column;
       gap: 30px;
+
+      .trendy {
+        font-size: 18px;
+        transition: 850ms;
+
+        @media (max-width: 598px) {
+          font-size: 15px;
+        }
+
+        @media (max-width: 430px) {
+          font-size: 12px;
+        }
+      }
 
       div {
         button {
@@ -82,6 +185,22 @@
           padding: 15px;
           box-shadow: none;
           border: none;
+          font-size: 18px;
+          transition: 850ms;
+
+          @media (max-width: 960px) {
+            background-color: #f2f2f2;
+            color: #24444e;
+            padding: 10px;
+          }
+
+          @media (max-width: 598px) {
+            font-size: 15px;
+          }
+
+          @media (max-width: 430px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -195,6 +314,106 @@
         h2 {
           font-size: 14px;
           font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+// about page
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 100px;
+    align-items: center;
+    gap: 80px;
+    transition: 850ms;
+
+    @media (max-width: 960px) {
+      padding: 24px 70px;
+      gap: 70px;
+    }
+
+    @media (max-width: 830px) {
+      padding: 24px 50px;
+      gap: 50px;
+    }
+
+    @media (max-width: 690px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 598px) {
+      gap: 20px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 30px;
+      flex-direction: column;
+    }
+
+    img {
+      width: 400px;
+
+      @media (max-width: 960px) {
+        width: 350px;
+      }
+
+      @media (max-width: 830px) {
+        width: 300px;
+      }
+
+      @media (max-width: 690px) {
+        width: 250px;
+      }
+
+      @media (max-width: 598px) {
+        width: 200px;
+      }
+    }
+
+    .apparel {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        font-weight: 500;
+        font-size: 30px;
+        transition: 850ms;
+
+        @media (max-width: 960px) {
+          font-size: 24px;
+        }
+
+        @media (max-width: 598px) {
+          font-size: 16px;
+        }
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        p {
+          font-weight: 400;
+          font-size: 24px;
+          text-align: justify;
+          transition: 850ms;
+
+          @media (max-width: 960px) {
+            font-size: 18px;
+          }
+
+          @media (max-width: 598px) {
+            font-size: 15px;
+          }
         }
       }
     }
