@@ -2,7 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./about.css";
 import logo from "../../assets/images/logo.png";
-
+import img1 from "../../assets/images/img1.png";
+import img2 from "../../assets/images/img2.png";
+import img3 from "../../assets/images/img3.png";
+import img4 from "../../assets/images/img4.png";
+import img5 from "../../assets/images/img5.png";
+import img6 from "../../assets/images/img6.png";
+import img7 from "../../assets/images/img7.png";
+import img8 from "../../assets/images/img8.png";
 
 const NewArrivals = () => {
   return (
@@ -18,6 +25,95 @@ const NewArrivals = () => {
         <Link to={"/"}>
           <img src={logo} alt="" />
         </Link>{" "}
+      </div>
+
+      <div className="links">
+        <ul>
+          <li>JEWELRY</li>
+          <li>CAMPAIGNS</li>
+          <li>PRESS</li>
+          <li>SEARCH</li>
+          <li>CART(2)</li>
+        </ul>
+      </div>
+
+      <div className="earrings">
+        <h2>EARRINGS</h2>
+      </div>
+      
+      <div className="img-gallery">
+        <div className="img-row">
+          <div className="img-line">
+            <div className="img-col">
+              <img src={img1} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+            <div className="img-col">
+              <img src={img2} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="img-row">
+          <div className="img-line">
+            <div className="img-col">
+              <img src={img3} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+            <div className="img-col">
+              <img src={img4} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="img-row">
+          <div className="img-line">
+            <div className="img-col">
+              <img src={img5} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+            <div className="img-col">
+              <img src={img6} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="img-row">
+          <div className="img-line">
+            <div className="img-col">
+              <img src={img7} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+            <div className="img-col">
+              <img src={img8} alt="" />
+              <div className="text">
+                <h1>Kaila Dress Es</h1>
+                <h2>$325.00 - $450.00</h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="links3">
