@@ -12,7 +12,7 @@ const Parks = () => {
         </div>
         <div class="img-section">
           <div className="img1">
-            <img width="600px" height="500px" src={img1} alt="" />
+            <img width="300px" height="500px" src={img1} alt="" />
             <div className="lean-in">
               <h1>LEANING IN</h1>
               <div className="a">
@@ -21,7 +21,7 @@ const Parks = () => {
             </div>
           </div>
           <div className="img2">
-            <img width="600px" height="500px" src={img3} alt="" />
+            <img width="300px" height="500px" src={img3} alt="" />
             <div className="lean-in">
               <h1>ALL OVER VELVET</h1>
               <div className="a">
