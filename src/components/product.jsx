@@ -24,8 +24,8 @@ const Product = () => {
         </div>
 
         <div className="big-frame">
-          <img src={productimg1} width={1000} height={900} alt="" />
-          <img src={productimg2} width={1000} height={1000} alt="" />
+          <img src={productimg1} width={500} height={900} alt="" />
+          <img src={productimg2} width={500} height={400} alt="" />
         </div>
 
         <div className="details">

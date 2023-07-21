@@ -3,7 +3,7 @@ import Product from './product';
 // import NavBar2 from "./NavBar2.jsx";
 import Featured from './Featured';
 
-const Catalog = () => {
+const ProductPage = () => {
   return (
     <div>
       {/* <NavBar2 /> */}
@@ -14,4 +14,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default ProductPage;

@@ -465,11 +465,11 @@ a {
   display: grid;
   grid-template-columns: 1fr 2fr 8fr;
   gap: 10px;
-  width: 80vw;
+  width: 40vw;
+  margin: 20px 10%;
 }
 
 .gallery {
-  height: inherit;
   position: relative;
 }
 
@@ -481,14 +481,13 @@ a {
 
 .big-frame {
   background: #f4f4f4;
-  width: fit-content;
 }
 
 
 .marigold {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: 10px;
   padding: 5px 0px 0px 40px;
   align-items: flex-start;
 }
