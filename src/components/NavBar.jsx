@@ -45,9 +45,11 @@ const NavBar = () => {
               Search <FontAwesomeIcon icon={faMagnifyingGlass} />
             </a>
           </h1>
-          <h1>
-            <a href="#">Account</a>
-          </h1>
+          <Link to={"/product"}>
+            <h1>
+              <a href="#">Account</a>
+            </h1>
+          </Link>
           <h1>
             <a href="#">
               Bag <FontAwesomeIcon icon={faLock} />
