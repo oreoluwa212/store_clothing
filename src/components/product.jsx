@@ -1,7 +1,7 @@
 import React from "react";
 import "../App";
-import productimg1 from "../assets/images/img4.png"
-import productimg2 from "../assets/images/img5.png"
+import productimg1 from "../assets/images/product-img1.jpg"
+import productimg2 from "../assets/images/product-img2.jpg"
 
 const Product = () => {
   return (

@@ -9,76 +9,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1000px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  font-weight: 400;
   overflow-x: hidden;
-
-}
-
-.nav-menu {
+  /* color: #616161; */
+  color: #000000;
   background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #616161;
-  font-weight: 500;
-  padding: 10px;
-}
-.nav-menu h2 {
-  font-size: 18px;
 }
 
-.nav-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  padding: 15px 5%;
+::selection {
+  /* Change highlight background color to blue */
+  background: #494949;
+  /* Change highlight text color to white */
+  color: #f4f4f4;
 }
 
-.nav-items a {
+a {
   text-decoration: none;
-  font-size: 16px;
-  color: black;
-}
-
-.first {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  padding: 10px 0px;
-}
-
-.second {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  padding: 10px 0px;
-  justify-content: end;
-}
-
-.Participle-nav {
-  font-size: 23px;
-  text-align: center;
-}
-
-hr {
-  background: #f4f4f4;
-  margin: 10px 5%;
+  color: inherit;
 }
 
 
 
 
-/* --------------------------------------------Hero Section -------------------------------------------------- */
-.section1 {
+/* --------------------------------------------Hero Section --------------------------------------------------  */
+/* .section1 {
   background-image: url("../src/assets/images/hero.png");
   background-position: center;
   display: flex;
@@ -93,7 +52,7 @@ hr {
   width: 400px;
   height: inherit;
   border: 3px solid transparent;
-}
+} 
 
 .elevate {
   position: absolute;
@@ -157,12 +116,13 @@ hr {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-}
+} 
+*/
 
 
 
 /* ----------------------------------Parks-section-------------------------------- */
-.Parks-section {
+/* .Parks-section {
   padding: 5px 10%;
   justify-content: center;
   text-align: center;
@@ -219,13 +179,13 @@ hr {
   border-top: 4px solid #616161;
   height: 10px;
   width: 100%;
-}
+} */
 
 
 
 
 /* -------------------------------------------- Feature Section -------------------------------------------------- */
-.img-section2 {
+/* .img-section2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
@@ -296,17 +256,17 @@ hr {
   background: transparent;
   font-size: 26px;
   font-family: 'Crimson Text', serif;
-}
+} */
 
 
 
 
 /* ---------------------------------- Footer-section-------------------------------- */
 /* Add a wrapper for the footer content */
-.footer-container {
+/* .footer-container {
   max-width: 1400px;
   margin: 0 auto;
-  /* background: #edf5f5; */
+  background: #edf5f5;
   width: 100%;
   padding: 20px;
 }
@@ -414,21 +374,14 @@ hr {
   margin-top: 15px;
   color: #969393;
   font-weight: 500;
-}
-
-
-
-
-
-
-
+} */
 
 
 
 
 
 /* ---------------------------------------- Catalogue Products ------------------------------------------------- */
-.catalog-section {
+/* .catalog-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -501,13 +454,13 @@ hr {
 
 .Parks-section .catalog-section .img2 {
   flex-basis: 80%;
-}
+} */
 
 
 
 
 /* ------------------------------------------------------- Product section ----------------------------- */
-.photos {
+/* .photos {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr 8fr;
@@ -829,4 +782,4 @@ hr {
     font-size: 22px;
     text-align: center;
   }
-}
+} */
