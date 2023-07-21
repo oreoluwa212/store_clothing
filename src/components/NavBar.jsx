@@ -1,64 +1,116 @@
-import React from 'react';
-import '../App';
+import { useState } from 'react';
+import '../styles/PageStyles.scss';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBars,
+  faMagnifyingGlass,
+  faXmark,
+} from '@fortawesome/free-solid-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const onClickMenu = () => {
+    setOpenDrawer(true);
+  };
+
+  const handleClose = () => {
+    setOpenDrawer(false);
+  };
+
   return (
-    <>
-      <div className="nav-menu">
-        <h2>Free Shipping On All U.S Orders</h2>
-      </div>
+    <div className="nav-container">
+      <div className="nav-menu">Free Shipping On All U.S Orders</div>
 
       <div className="nav-items">
         <div className="first">
-          <Link to={"/new-arrivals"}>
-            <h1>
-              <a className="active" href="#">
-                New Arrivals
-              </a>
-            </h1>
+          <Link to={'/new-arrivals'}>
+            <a className="active" href="#">
+              New Arrivals
+            </a>
           </Link>
 
-          <Link to={"/catalog"}>
-            <h1>
-              <a href="#">Shop</a>
-            </h1>
+          <Link to={'/catalog'}>
+            <a href="#">Shop</a>
           </Link>
-          <Link to={"/about-us"}>
-            <h1>
-              <a href="#">About Us</a>
-            </h1>
+          <Link to={'/about-us'}>
+            <a href="#">About Us</a>
           </Link>
         </div>
 
-        <div className="Participle-nav">
-          <Link to={"/"}>
+        <div className="participle-nav">
+          <Link to={'/'}>
             <h1>Participle+</h1>
           </Link>
         </div>
+
         <div className="second">
-          <h1>
+          <a className="active" href="#">
+            Search <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </a>
+
+          <a href="#">Account</a>
+
+          <a href="#">
+            Bag <FontAwesomeIcon icon={faLock} />
+          </a>
+        </div>
+      </div>
+
+      <div className="mobile-nav-container">
+        <div className="participle-nav">
+          <Link to={'/'}>
+            <h1>Participle+</h1>
+          </Link>
+        </div>
+
+        <FontAwesomeIcon icon={faBars} onClick={onClickMenu} />
+      </div>
+
+      {openDrawer && (
+        <div className="mobile-nav-items">
+          <FontAwesomeIcon
+            icon={faXmark}
+            className="close-icon"
+            onClick={handleClose}
+          />
+
+          <div className="participle-nav">
+            <Link to={'/'}>
+              <h1>Participle+</h1>
+            </Link>
+          </div>
+
+          <div className="first">
+            <Link to={'/new-arrivals'}>
+              <a className="active" href="#">
+                New Arrivals
+              </a>
+            </Link>
+
+            <Link to={'/catalog'}>
+              <a href="#">Shop</a>
+            </Link>
+            <Link to={'/about-us'}>
+              <a href="#">About Us</a>
+            </Link>
+          </div>
+
+          <div className="second">
             <a className="active" href="#">
               Search <FontAwesomeIcon icon={faMagnifyingGlass} />
             </a>
-          </h1>
-          <Link to={"/product"}>
-            <h1>
-              <a href="#">Account</a>
-            </h1>
-          </Link>
-          <h1>
+
+            <a href="#">Account</a>
+
             <a href="#">
               Bag <FontAwesomeIcon icon={faLock} />
             </a>
-          </h1>
+          </div>
         </div>
-      </div>
-      <hr />
-    </>
+      )}
+    </div>
   );
 };
 

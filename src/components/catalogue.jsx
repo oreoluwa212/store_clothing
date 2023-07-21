@@ -1,12 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import img11 from "../assets/images/img1.png";
-import img22 from "../assets/images/img2.png";
-import img33 from "../assets/images/img3.png";
-import img44 from "../assets/images/img4.png";
-import img5 from "../assets/images/img5.png";
-import img3 from "../assets/images/img6.png";
+import img11 from "../assets/images/prodimg3.png";
+import img1 from "../assets/images/product-img3.png";
+
+import img22 from "../assets/images/prodimg1.png";
+import img33 from "../assets/images/prodimg6.png";
+import img44 from "../assets/images/product-img4.png";
+import img55 from "../assets/images/prodImg8.png";
+import img5 from "../assets/images/black.png";
+import img3 from "../assets/images/proImg2.png";
 
 const Catalogue = () => {
   return (
@@ -88,7 +91,7 @@ const Catalogue = () => {
             </div>
           </div>
           <div className="img2">
-            <img className="image" src={img22} alt="" />
+            <img className="image" src={img1} alt="" />
             <div className="lean-in">
               <h1 className="manu">Marigold Trouser</h1>
               <h2 className="manua">$78</h2>

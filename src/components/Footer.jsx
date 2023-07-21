@@ -1,5 +1,5 @@
-import React from "react";
-import "../App";
+// import React from "react";
+import '../App';
 
 const Footer = () => {
   return (
@@ -11,9 +11,7 @@ const Footer = () => {
             <h3> 132 Smith Street </h3>
             <h3> Brooklyn, NY 14231</h3>
             <div className="contact-us">
-              <a href="#">
-                Contact Us
-              </a>
+              <a href="#">Contact Us</a>
             </div>
           </div>
         </div>
