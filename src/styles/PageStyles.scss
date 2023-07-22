@@ -367,6 +367,24 @@
   display: flex;
   padding: 24px 100px;
   background-color: #e2e2e2;
+  justify-content: space-between;
+  gap: 30px;
+
+  .participle,
+  .customer,
+  .connect {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .oar,
+    .care,
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
 }
 
 // about page
