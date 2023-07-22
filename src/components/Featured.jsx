@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
 import '../styles/PageStyles.scss';
-import img4 from '../assets/images/proImg2.png';
-import img5 from '../assets/images/prodImg6.png';
+import img4 from '../assets/images/product-img5.png';
+import img5 from '../assets/images/prodimg3.png';
 import img6 from '../assets/images/product-img3.png';
 import img8 from '../assets/images/prodimg6.png';
 
