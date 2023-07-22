@@ -1,12 +1,12 @@
 import Footer from './Footer';
 import Product from './product';
-// import NavBar2 from "./NavBar2.jsx";
 import Featured from './Featured';
+import NavBar from './NavBar';
 
 const ProductPage = () => {
   return (
     <div>
-      {/* <NavBar2 /> */}
+      <NavBar />
       <Product />
       <Featured />
       <Footer />
