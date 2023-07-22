@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import '../styles/PageStyles.scss';
 import { Link } from 'react-router-dom';
+
+import '../styles/PageStyles.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
   faMagnifyingGlass,
   faXmark,
+  faLock,
 } from '@fortawesome/free-solid-svg-icons';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
