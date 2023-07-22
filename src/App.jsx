@@ -9,7 +9,7 @@ import LandingPage from './components/LandingPage';
 import Catalog from './components/catalogProduct';
 import Product from './components/productPage';
 import NewArrivals from './components/NewArrivals';
-import AboutUs from './components/aboutUs';
+import About from './components/About';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/about-us" element={<About />} />
           <Route path="/new-arrivals" element={<NewArrivals />} />
 
           <Route path="/catalog" element={<Catalog />} />

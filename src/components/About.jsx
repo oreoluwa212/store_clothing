@@ -3,7 +3,7 @@ import NavBar from './NavBar';
 import Owner from '../assets/images/owner.png';
 import Footer from './Footer';
 
-const AboutUs = () => {
+const About = () => {
   return (
     <div className="about-wrapper">
       <NavBar />
@@ -45,4 +45,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;
