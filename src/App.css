@@ -392,21 +392,6 @@ a {
   padding: 20px 5px;
 }
 
-.Parks2 {
-  display: flex;
-  justify-content: center;
-  padding: 20px 5px;
-}
-
-.home {
-  font-weight: 500;
-  font-size: 23px;
-}
-
-.home span {
-  font-weight: 400;
-  font-size: 21px;
-}
 
 .array {
   display: flex;

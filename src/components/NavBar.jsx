@@ -26,7 +26,7 @@ const NavBar = () => {
 
       <div className="nav-items">
         <div className="first">
-          <Link to={'/new-arrivals'}>
+          <Link to={'/product'}>
             <a className="active" href="#">
               New Arrivals
             </a>
