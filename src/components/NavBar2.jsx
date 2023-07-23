@@ -14,7 +14,7 @@ const NavBar2 = () => {
 
       <div class="nav-items">
         <div class="first">
-          <Link to={"/new-arrivals"}>
+          <Link to={"/product"}>
             <h1>
               <a class="active" href="#">
                 New Arrivals
