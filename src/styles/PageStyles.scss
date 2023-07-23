@@ -942,6 +942,11 @@
   max-width: 1350px;
   // margin: 20px 10%;
 
+  @media (max-width: 740px) {
+      max-width: 600px;
+      grid-template-columns: 2fr 1fr;
+    }
+
   @media (max-width: 919px) {
       max-width: 800px;
       grid-template-columns: 1fr 2fr;
@@ -956,20 +961,22 @@
   .group1 {
     display: flex;
     flex-direction: row;
+
     
     @media (max-width: 1239px) {
       flex-direction: column;
       gap: 20px;
     }
     .gallery {
-      position: relative;
       
-
       .imgs {
         display: flex;
         flex-direction: column;
         padding: 0px 20px 0px 0px;
 
+          @media (max-width: 740px) {
+             width: 200px;
+            }
         @media (max-width: 1239px) {
           display: flex;
           flex-direction: row;
@@ -979,13 +986,18 @@
           cursor: pointer;
           height: 120px;
 
+            @media (max-width: 420px) {
+              width: 45px;
+                height: 80px;
+              }
+
           @media (max-width: 919px) {
-              width: 50px;
-              height: 70px;
+              // width: 50px;
+              height: 80px;
             }
 
           @media (max-width: 1239px) {
-            width: 67px;
+            // width: 67px;
             height: 100px;
           }
         }
@@ -999,26 +1011,34 @@
         width: 500px;
         height: 700px;
 
+          @media (max-width: 420px) {
+              width: 270px;
+            }
+
         @media (max-width: 919px) {
-          width: 400px;
+          // width: 400px;
         }
       }
 
       .big-frame-img {
-        width: 500px;
+        // width: 500px;
         padding-top: 20px;
         height: 400px;
       }
-            @media (max-width: 919px) {
-              width:300px;
+            @media (max-width: 420px) {
+              width:250px;
             }
     }
   }
 
   .details {
 
+      @media (max-width: 420px) {
+          width: 190px;
+        }
+
     @media (max-width: 919px) {
-        width: 250px;
+        // width: 250px;
       }
 
     .marigold {
@@ -1029,6 +1049,10 @@
       padding: 5px 0px 0px 40px;
       align-items: flex-start;
 
+        @media (max-width: 740px) {
+            flex-direction: column;
+            align-items: end;
+          }
       i {
         font-size: 30px;
         padding: 5px 10px;
@@ -1099,9 +1123,17 @@
     font-weight: 500;
     font-size: 20px;
 
+      @media (max-width: 740px) {
+          font-size: 18px;
+        }
+
     span {
       font-weight: 400;
       font-size: 20px;
+
+        @media (max-width: 740px) {
+            font-size: 16px;
+          }
     }
   }
 }
