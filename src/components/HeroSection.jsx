@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import '../styles/PageStyles.scss';
+
 
 const HeroSection = () => {
   return (
@@ -9,7 +11,9 @@ const HeroSection = () => {
         <div className="elevate-sub">
           <p className="trendy">Shop Our Trendy Fashion</p>
           <div>
-            <button className="input-btn">Go to Catalog</button>
+            <Link to={"/catalog"}>
+              <button className="input-btn">Go to Catalog</button>
+            </Link>
           </div>
         </div>
       </div>
