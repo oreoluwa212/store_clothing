@@ -1,15 +1,13 @@
 import React from "react";
-import "./about.css";
-import Footer from "../Footer";
+import NewArrivals from "../NewArrivals";
 
-import NavAbout from "./nav.about";
 
-const AboutUs = () => {
+const Arrivals = () => {
   return (
     <div>
-      <NavAbout />
+      <NewArrivals />
     </div>
   );
 };
 
-export default AboutUs;
+export default Arrivals;

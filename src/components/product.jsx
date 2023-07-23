@@ -11,20 +11,22 @@ const Product = () => {
         </h1>
       </div>
       <div className="photos">
-        <div className="gallery">
-          <div className="imgs">
-            <img src={productimg1} height={150} alt="" />
-            <img src={productimg2} height={150} alt="" />
-            <img src={productimg1} height={150} alt="" />
-            <img src={productimg2} height={150} alt="" />
-            <img src={productimg1} height={150} alt="" />
-            <img src={productimg2} height={150} alt="" />
+        <div className="group1">
+          <div className="gallery">
+            <div className="imgs">
+              <img src={productimg1} alt="" />
+              <img src={productimg2} alt="" />
+              <img src={productimg1}  alt="" />
+              <img src={productimg2} alt="" />
+              <img src={productimg1} alt="" />
+              <img src={productimg2} alt="" />
+            </div>
           </div>
-        </div>
 
-        <div className="big-frame">
-          <img src={productimg1} width={500} height={900} alt="" />
-          <img src={productimg2} width={500} height={400} alt="" />
+          <div className="big-frame">
+            <img src={productimg1} alt="" />
+            <img src={productimg2} className='big-frame-img' alt="" />
+          </div>
         </div>
 
         <div className="details">
