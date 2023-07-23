@@ -151,7 +151,7 @@
 
   @media (max-width: 598px) {
     width: 90%;
-  margin: 0 30px;
+    margin: 0 30px;
   }
 
   .elevate {
@@ -304,28 +304,28 @@
     gap: 10px;
 
     @media (max-width: 570px) {
-        width: 300px;
-      }
+      width: 300px;
+    }
 
     h1 {
       font-weight: 400;
 
       @media (max-width: 570px) {
-          font-size: 20px;
-          width: 100%;
+        font-size: 20px;
+        width: 100%;
         margin-left: 90px;
-          font-weight: 400;
-        }
+        font-weight: 400;
+      }
     }
 
     a {
       text-decoration: underline;
-    
 
-        @media (max-width: 420px) {
-          font-size: 12px;
-          font-weight: 400;
-        }
+
+      @media (max-width: 420px) {
+        font-size: 12px;
+        font-weight: 400;
+      }
 
     }
   }
@@ -335,71 +335,75 @@
     justify-content: space-between;
     gap: 30px;
 
-        @media (max-width: 420px) {
-          width: 400px;
-          margin-left: 30px;
-          padding: 0 50px;
-        }
+    @media (max-width: 420px) {
+      width: 400px;
+      margin-left: 30px;
+      padding: 0 50px;
+    }
+
     .img1,
     .img2 {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 24px;
-      
+
       @media (max-width: 420px) {
         width: 100%;
       }
     }
 
-      img {
-        width: 100%;
-        height: 800px;
+    img {
+      width: 100%;
+      height: 800px;
+      cursor: pointer;
 
-        @media (max-width: 780px) {
-          height: 400px;
-          padding-top: 40px;
-        }
-
-        @media (max-width: 1336px) {
-          height: 400px;
-          padding-top: 40px;
-        }
-
+      @media (max-width: 780px) {
+        height: 400px;
+        padding-top: 40px;
       }
 
-      .lean-in {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+      @media (max-width: 1336px) {
+        height: 400px;
+        padding-top: 40px;
+      }
 
-        h1 {
-            @media (max-width: 420px) {
-              font-size: 14px;
-              font-weight: 400;
-            }
-            @media (max-width: 955px) {
-              font-size: 18px;
-              font-weight: 400;
-            }
-          }
-        
-        div {
-          a {
-            text-decoration: underline;
+    }
 
+    .lean-in {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      h1 {
         @media (max-width: 420px) {
-          font-size: 10px;
+          font-size: 14px;
           font-weight: 400;
-          }
+        }
+
         @media (max-width: 955px) {
-          font-size: 12px;
+          font-size: 18px;
           font-weight: 400;
+        }
+      }
+
+      div {
+        a {
+          text-decoration: underline;
+
+          @media (max-width: 420px) {
+            font-size: 10px;
+            font-weight: 400;
+          }
+
+          @media (max-width: 955px) {
+            font-size: 12px;
+            font-weight: 400;
           }
         }
 
-        
+
       }
     }
   }
@@ -427,10 +431,10 @@
     h1 {
       font-weight: 400;
 
-          @media (max-width: 420px) {
-            font-size: 20px;
-            font-weight: 400;
-          }
+      @media (max-width: 420px) {
+        font-size: 20px;
+        font-weight: 400;
+      }
 
     }
   }
@@ -462,6 +466,7 @@
       img {
         width: 200px;
         height: 300px;
+        cursor: pointer;
       }
 
       div {
@@ -518,6 +523,7 @@
   @media (max-width: 430px) {
     padding: 10px 5px;
   }
+
   @media (max-width: 780px) {
     display: flex;
     flex-direction: column;
@@ -534,8 +540,8 @@
     grid-template-columns: 1fr 1fr 1fr;
 
     @media (max-width: 430px) {
-        padding: 20px 5px;
-      }
+      padding: 20px 5px;
+    }
 
     @media (max-width: 726px) {
       padding: 5px 20px;
@@ -552,19 +558,21 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+
       @media (max-width: 430px) {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
       h1 {
         font-size: 21px;
         font-weight: 500;
 
         @media (max-width: 430px) {
-            font-size: 12px;
-          }
+          font-size: 12px;
+        }
+
         @media (max-width: 1336px) {
           font-size: 17px;
         }
@@ -646,6 +654,7 @@
           padding: 2px 60px;
           font-size: 10px;
         }
+
         @media (max-width: 780px) {
           padding: 5px 20px;
           font-size: 12px;
@@ -701,6 +710,7 @@
     img {
       width: 570px;
       transition: 850ms;
+      cursor: pointer;
 
       @media (max-width: 960px) {
         width: 350px;
@@ -849,6 +859,7 @@
 
       img {
         display: flex;
+        cursor: pointer;
         align-items: center;
         width: 570px;
         height: 670px;
@@ -937,6 +948,10 @@
       display: flex;
       flex-direction: column;
       padding: 0px 20px 0px 0px;
+
+      img {
+        cursor: pointer;
+      }
     }
   }
 
@@ -1160,6 +1175,7 @@
     width: 100px;
     height: inherit;
     border: 3px solid transparent;
+    cursor: pointer;
   }
 
   .elevate {
