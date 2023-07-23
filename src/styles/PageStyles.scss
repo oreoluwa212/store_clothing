@@ -2,6 +2,11 @@
 .landing-page {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 420px) {
+    overflow-x: hidden;
+
+  }
 }
 
 // nav bar
@@ -61,6 +66,11 @@
     @media (max-width: 598px) {
       padding: 24px 50px;
     }
+
+    @media (max-width: 420px) {
+      overflow-x: hidden;
+
+    }
   }
 
   .mobile-nav-items {
@@ -101,6 +111,11 @@
 
       @media (max-width: 450px) {
         gap: 30px;
+      }
+
+      @media (max-width: 420px) {
+        overflow-x: hidden;
+
       }
     }
   }
