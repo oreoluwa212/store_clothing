@@ -45,9 +45,11 @@ const NavBar2 = () => {
               Search <FontAwesomeIcon icon={faMagnifyingGlass} />
             </a>
           </h1>
-          <h1>
-            <a href="#">Sign In</a>
-          </h1>
+          <Link to={"/login"}>
+            <h1>
+              <a href="#">Sign In</a>
+            </h1>
+          </Link>
           <button>
             14 items <FontAwesomeIcon icon={faLock} />
           </button>

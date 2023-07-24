@@ -26,22 +26,22 @@ const NavBar = () => {
 
       <div className="nav-items">
         <div className="first">
-          <Link to={'/product'}>
+          <Link to={"/product"}>
             <a className="active" href="#">
               New Arrivals
             </a>
           </Link>
 
-          <Link to={'/catalog'}>
+          <Link to={"/catalog"}>
             <a href="#">Shop</a>
           </Link>
-          <Link to={'/about-us'}>
+          <Link to={"/about-us"}>
             <a href="#">About Us</a>
           </Link>
         </div>
 
         <div className="participle-nav">
-          <Link to={'/'}>
+          <Link to={"/"}>
             <h1>Participle+</h1>
           </Link>
         </div>
@@ -50,8 +50,9 @@ const NavBar = () => {
           <a className="active" href="#">
             Search <FontAwesomeIcon icon={faMagnifyingGlass} />
           </a>
-
-          <a href="#">Account</a>
+          <Link to={"/login"}>
+            <a href="#">Account</a>
+          </Link>
 
           <a href="#">
             Bag <FontAwesomeIcon icon={faLock} />
@@ -61,7 +62,7 @@ const NavBar = () => {
 
       <div className="mobile-nav-container">
         <div className="participle-nav">
-          <Link to={'/'}>
+          <Link to={"/"}>
             <h1>Participle+</h1>
           </Link>
         </div>
@@ -78,22 +79,22 @@ const NavBar = () => {
           />
 
           <div className="participle-nav">
-            <Link to={'/'}>
+            <Link to={"/"}>
               <h1>Participle+</h1>
             </Link>
           </div>
 
           <div className="first">
-            <Link to={'/product'}>
+            <Link to={"/product"}>
               <a className="active" href="#">
                 New Arrivals
               </a>
             </Link>
 
-            <Link to={'/catalog'}>
+            <Link to={"/catalog"}>
               <a href="#">Shop</a>
             </Link>
-            <Link to={'/about-us'}>
+            <Link to={"/about-us"}>
               <a href="#">About Us</a>
             </Link>
           </div>
