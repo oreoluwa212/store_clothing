@@ -10,7 +10,7 @@ import Catalog from './components/catalogProduct';
 import Product from './components/productPage';
 import NewArrivals from './components/NewArrivals';
 import About from './components/About';
-import LoginPage from './components/loginPage';
+// import LoginPage from './components/loginPage';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
 
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/product" element={<Product />} />
-          <Route path="/login" element={<LoginPage />} />
+          {/* <Route path="/login" element={<LoginPage />} /> */}
         </Routes>
       </BrowserRouter>
     </>

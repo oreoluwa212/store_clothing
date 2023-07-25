@@ -965,37 +965,47 @@
 
 // ---------------------- Login/Signup -------------
 .login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 1;
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 80px;
   overflow: hidden;
 
   .login-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 70%;
-
-    .login-img {
-
-      img {
-        width: 700px;
-        height: 800px;
-        opacity: .8;
-      }
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    width: 60%;
+    margin-top: 10px;
 
     .login-section {
       background: #fff;
-      height: 800px;
-      width: 800px;
+      height: 650px;
+      width: 700px;
 
       .logo-text {
         padding: 10px;
+        display: flex;
+        justify-content: flex-end;
 
         h1 {
           font-size: 20px;
           font-weight: 500;
+          padding-right: 90px;
+          padding-top: 10px;
+          cursor: pointer;
+        }
+
+        p {
+
         }
       }
 
@@ -1005,7 +1015,7 @@
         margin: 30px 10%;
 
         .log-in {
-          padding-top: 40px;
+          // padding-top: 40px;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -1021,14 +1031,13 @@
           }
 
           .button-div {
-            padding-top: 10px;
 
             button {
               display: inline-flex;
               justify-content: center;
               align-items: center;
               gap: 20px;
-              padding: 12px 190px;
+              padding: 15px 170px;
               background: hsl(0, 0%, 100%);
               border: 0;
               box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -1036,7 +1045,7 @@
               margin-top: 12px;
 
               h3 {
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: 400;
               }
             }
@@ -1047,7 +1056,7 @@
             display: inline-flex;
             flex-direction: row;
             align-items: flex-end;
-            padding-top: 20px;
+            padding-top: 5px;
 
             hr {
               flex-basis: 70%;
@@ -1073,14 +1082,13 @@
               label {
                 font-size: 18px;
                 font-weight: 500;
-                padding-top: 5px;
               }
 
               input {
                 background: hsl(0, 0%, 100%);
                 border: 0;
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-                padding: 18px;
+                padding: 16px;
 
                 &::placeholder {
                   font-size: 18px;
@@ -1113,7 +1121,7 @@
 
               input {
                 background: hsl(0, 0%, 100%);
-                padding: 10px;
+                padding: 16px;
                 border: 0;
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -1136,11 +1144,11 @@
             }
 
             .login-btn {
-              padding-top: 40px;
+              padding-top: 10px ;
 
               button {
                 background: #000;
-                padding: 20px;
+                padding: 15px;
                 font-size: 22px;
                 color: white;
                 border: 0;
