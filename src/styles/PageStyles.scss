@@ -974,24 +974,25 @@
   .login-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 1000px;
+    width: 70%;
 
     .login-img {
 
 
       img {
-        width: 500px;
-        height: 550px;
+        width: 700px;
+        height: 800px;
         opacity: .8;
       }
     }
 
     .login-section {
       background: #fff;
-      height: 550px;
+      height: 800px;
+      width: 800px;
 
       .logo-text {
-        padding: 5px;
+        padding: 10px;
 
         h1 {
           font-size: 18px;
@@ -1005,19 +1006,18 @@
         margin: 30px 10%;
 
         .log-in {
-          padding-top: 5px;
+          padding-top: 10px;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
 
           h1 {
             font-weight: 500;
-            font-size: 20px;
-
+            font-size: 24px;
           }
 
           p {
-            font-size: 16px;
+            font-size: 18px;
             padding-top: 20px;
           }
 
@@ -1029,7 +1029,7 @@
               justify-content: center;
               align-items: center;
               gap: 20px;
-              padding: 8px 90px;
+              padding: 12px 190px;
               background: hsl(0, 0%, 100%);
               border: 0;
               box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -1037,7 +1037,7 @@
               margin-top: 12px;
 
               h3 {
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 400;
               }
             }
@@ -1047,24 +1047,24 @@
             width: 100%;
             display: inline-flex;
             flex-direction: row;
-              align-items: flex-end;
+            align-items: flex-end;
+            padding-top: 20px;
 
             hr {
               flex-basis: 70%;
-
             }
-            p{
+
+            p {
               flex-basis: 20%;
               text-align: center;
-              padding: 20px 0px 0px ;
+              padding: 20px 0px 0px;
               margin-top: 10px;
             }
           }
 
           .form-place {
-            margin-top: 20px;
+            padding-top: 50px;
             width: 100%;
-            height: 200px;
 
             .email {
               display: flex;
@@ -1072,16 +1072,21 @@
               gap: 10px;
 
               label {
-                  font-size: 16px;
-                  font-weight: 400;
-                  padding-top: 5px;
-                }
+                font-size: 18px;
+                font-weight: 500;
+                padding-top: 5px;
+              }
 
               input {
-              background: hsl(0, 0%, 100%);
+                background: hsl(0, 0%, 100%);
                 border: 0;
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-                padding: 10px;
+                padding: 18px;
+
+                &::placeholder {
+                  font-size: 18px;
+                  letter-spacing: 1px;
+                }
               }
             }
 
@@ -1091,27 +1096,33 @@
               gap: 8px;
 
               .forgot-password {
-                padding-top: 12px;
+                padding-top: 20px;
                 display: flex;
                 justify-content: space-between;
 
                 label {
-                    font-size: 16px;
-                    font-weight: 400;
-                  }
-                h4{
+                  font-size: 18px;
+                  font-weight: 500;
+                }
+
+                h4 {
                   color: rgb(0, 89, 255);
                   font-weight: 500;
-                  font-size: 14px;
+                  font-size: 18px;
                 }
               }
 
               input {
-              background: hsl(0, 0%, 100%);
+                background: hsl(0, 0%, 100%);
                 padding: 10px;
                 border: 0;
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+
+                &::placeholder {
+                  font-size: 18px;
+                  letter-spacing: 1px;
                 }
+              }
             }
 
             .checkbox {
@@ -1120,8 +1131,8 @@
               gap: 10px;
 
               h5 {
-                  font-size: 16px;
-                  font-weight: 500;
+                font-size: 20px;
+                font-weight: 400;
               }
             }
 
@@ -1130,14 +1141,15 @@
 
               button {
                 background: #000;
-                padding: 10px 160px;
-                font-size: 18px;
+                padding: 20px;
+                font-size: 22px;
                 color: white;
                 border: 0;
+                width: 100%;
               }
 
               p {
-                font-size: 14px;
+                font-size: 18px;
                 font-weight: 500;
 
                 span {
