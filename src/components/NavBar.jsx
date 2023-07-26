@@ -26,17 +26,16 @@ const NavBar = () => {
 
       <div className="nav-items">
         <div className="first">
-          <Link to={"/product"}>
-            <a className="active" href="#">
-              New Arrivals
-            </a>
-          </Link>
-
-          <Link to={"/catalog"}>
+         <Link to={"/catalog"}>
             <a href="#">Shop</a>
           </Link>
           <Link to={"/about-us"}>
             <a href="#">About Us</a>
+          </Link>
+            <Link to={"/contact-us"}>
+            <a href="#">
+              Contact Us
+            </a>
           </Link>
         </div>
 

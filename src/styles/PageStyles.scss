@@ -548,7 +548,7 @@
 // Footer Section
 .footer-container {
   display: flex;
-  padding: 40px 35px;
+  padding: 40px 100px;
   background-color: #eeeded;
   justify-content: space-between;
   gap: 10px;
@@ -1550,4 +1550,19 @@
       }
     }
   }
+}
+
+// Contact Us Page
+.contact-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // height: 100vh;
+
+  .contact-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+  padding: 24px 0;
+    }
 }
