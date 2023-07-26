@@ -47,16 +47,14 @@ const NavBar = () => {
 
       <div className="nav-items">
         <div className="first">
-         <Link to={"/catalog"}>
+          <Link to={"/catalog"}>
             <a href="#">Shop</a>
           </Link>
           <Link to={"/about-us"}>
             <a href="#">About Us</a>
           </Link>
-            <Link to={"/contact-us"}>
-            <a href="#">
-              Contact Us
-            </a>
+          <Link to={"/contact-us"}>
+            <a href="#">Contact Us</a>
           </Link>
         </div>
 
@@ -67,13 +65,20 @@ const NavBar = () => {
         </div>
 
         <div className="second">
-          <a className="active" href="#">
-            Search <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </a>
+          <Link to={"/product"}>
+            <a className="active" href="#">
+              Search <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </a>
+          </Link>
           <Link to={""}>
-            <a href="#" onClick={() => {
-              setLoginModal(true);
-            }}>Account</a>
+            <a
+              href="#"
+              onClick={() => {
+                setLoginModal(true);
+              }}
+            >
+              Account
+            </a>
           </Link>
 
           <a href="#">
@@ -135,7 +140,7 @@ const NavBar = () => {
         </div>
       )}
 
-      {openLoginModal && <Login closeLoginModal={setLoginModal}/>}
+      {openLoginModal && <Login closeLoginModal={setLoginModal} />}
     </div>
   );
 };
