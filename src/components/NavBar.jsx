@@ -1,11 +1,41 @@
 import React from 'react';
 import '../App';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
+
+import '../styles/PageStyles.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBars,
+  faMagnifyingGlass,
+  faXmark,
+  faLock,
+  faX,
+} from '@fortawesome/free-solid-svg-icons';
+import Login from './login';
+
 
 const NavBar = () => {
+  // UseState for opening the Drawer
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  // UseState for opening the Login Modal
+  const [openLoginModal, setLoginModal] = useState(false);
+
+  //Onclick funtion handling Open Drawer
+  const onClickMenu = () => {
+    setOpenDrawer(true);
+  };
+
+  //Onclick funtion handling Close Drawer
+  const handleClose = () => {
+    setOpenDrawer(false);
+  };
+
+
+  //Onclick funtion handling LogIn
+  const onClickLogIn = () => {
+    setLoginModal(true);
+  };
   return (
     <>
       <div className="nav-menu">
