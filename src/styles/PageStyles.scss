@@ -1652,7 +1652,9 @@
   }
 }
 
-// Contact Us Page
+
+
+//------------------------------------  Contact Us Page -------------------
 .contact-wrapper{
   display: flex;
   flex-direction: column;
@@ -1664,4 +1666,20 @@
   margin: 0 100px;
   padding: 24px 0;
     }
+}
+
+
+
+//------------------------------------  Items-Bag Page -------------------
+.items-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .items-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+    padding: 24px 0;
+  }
 }

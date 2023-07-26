@@ -2,16 +2,16 @@ import "../styles/PageStyles.scss";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
-const Contact = () => {
+const ItemsBag = () => {
   return (
-    <div className="contact-wrapper">
+    <div className="items-wrapper">
       <NavBar />
 
-      <div className="contact-section">Contact</div>
+      <div className="items-section">Items Bag</div>
 
       <Footer />
     </div>
   );
 };
 
-export default Contact;
+export default ItemsBag;

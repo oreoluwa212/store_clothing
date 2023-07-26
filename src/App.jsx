@@ -10,6 +10,8 @@ import Catalog from './components/catalogProduct';
 import Product from './components/productPage';
 import About from './components/About';
 import Contact from './components/Contact';
+import ItemsBag from './components/ItemsBag';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/product" element={<Product />} />
           <Route path='/contact-us' element={<Contact/>}/>
+          <Route path='/items-bag' element={<ItemsBag/>}/>
         </Routes>
       </BrowserRouter>
     </>

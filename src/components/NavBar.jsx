@@ -81,9 +81,11 @@ const NavBar = () => {
             </a>
           </Link>
 
-          <a href="#">
-            Bag <FontAwesomeIcon icon={faLock} />
-          </a>
+          <Link to={"/items-bag"}>
+            <a href="#">
+              Bag <FontAwesomeIcon icon={faLock} />
+            </a>
+          </Link>
         </div>
       </div>
 
@@ -133,9 +135,11 @@ const NavBar = () => {
 
             <a href="#">Account</a>
 
-            <a href="#">
-              Bag <FontAwesomeIcon icon={faLock} />
-            </a>
+            <Link to={"/items-bag"}>
+              <a href="#">
+                Bag <FontAwesomeIcon icon={faLock} />
+              </a>
+            </Link>
           </div>
         </div>
       )}
