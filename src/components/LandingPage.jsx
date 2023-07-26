@@ -7,6 +7,8 @@ import Featured from './Featured';
 
 import '../styles/PageStyles.scss';
 
+
+
 const LandingPage = () => {
   return (
     <div className="landing-page">

@@ -8,18 +8,39 @@ import {
   faMagnifyingGlass,
   faXmark,
   faLock,
+  faX,
 } from '@fortawesome/free-solid-svg-icons';
+import Login from './login';
 
 const NavBar = () => {
+  // UseState for opening the Drawer
   const [openDrawer, setOpenDrawer] = useState(false);
+
+  // UseState for opening the Login Modal
+  const [openLoginModal, setLoginModal] = useState(false);
+
+  // UseState for opening the Signup Modal
+  const [openSignUpModal, setSignUpModal] = useState(false);
+
+  //Onclick funtion handling Open Drawer
   const onClickMenu = () => {
     setOpenDrawer(true);
   };
 
+  //Onclick funtion handling Close Drawer
   const handleClose = () => {
     setOpenDrawer(false);
   };
 
+  //Onclick funtion handling SignUp
+  const onClickSignUp = () => {
+    setSignUpModal(true);
+  };
+
+  //Onclick funtion handling LogIn
+  const onClickLogIn = () => {
+    setLoginModal(true);
+  };
   return (
     <div className="nav-container">
       <div className="nav-menu">Free Shipping On All U.S Orders</div>
@@ -49,8 +70,10 @@ const NavBar = () => {
           <a className="active" href="#">
             Search <FontAwesomeIcon icon={faMagnifyingGlass} />
           </a>
-          <Link to={"/login"}>
-            <a href="#">Account</a>
+          <Link to={""}>
+            <a href="#" onClick={() => {
+              setLoginModal(true);
+            }}>Account</a>
           </Link>
 
           <a href="#">
@@ -111,6 +134,8 @@ const NavBar = () => {
           </div>
         </div>
       )}
+
+      {openLoginModal && <Login closeLoginModal={setLoginModal}/>}
     </div>
   );
 };
