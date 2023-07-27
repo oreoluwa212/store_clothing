@@ -1665,9 +1665,56 @@
 
   .contact-section {
     display: flex;
-    justify-content: space-between;
-    margin: 0 100px;
-    padding: 24px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    .contact-us {
+
+      .contact-txt {
+
+        padding: 20px;
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .contact-form {
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+
+          .name-email {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            gap: 20px;
+
+            input {
+              padding: 16px;
+            }
+          }
+
+          input {
+            width: 100%;
+            padding: 16px;
+          }
+
+                    button {
+                      background-color: #000000;
+                      color: #f2f2f2;
+                      padding: 20px;
+                      box-shadow: none;
+                      border: none;
+                      font-size: 24px;
+                      margin-top: 5px;
+                      transition: 850ms;
+                    }
+        }
+      }
+    }
   }
 }
 
