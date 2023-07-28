@@ -1268,8 +1268,6 @@
 }
 
 
-
-
 // ------------------------------------------------------- Product section -----------------------------
 .photos {
   position: relative;
@@ -1670,6 +1668,21 @@
     flex-direction: column-reverse;
 
     .contact-us {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      
+
+
+      img {
+        @media (max-width: 1160px) {
+          width: 80%;
+          height: 30vw;
+          
+        }
+      }
 
       .contact-txt {
 
@@ -1677,6 +1690,13 @@
 
         h1 {
           font-size: 24px;
+
+          @media (max-width:638px){
+          padding: 5px 30px;
+          }
+          @media (max-width: 1160px) {
+            font-size: 18px;
+          }
         }
 
         .contact-form {
@@ -1684,6 +1704,8 @@
           display: flex;
           flex-direction: column;
           gap: 20px;
+          justify-content: center;
+          align-items: center;
 
 
           .name-email {
@@ -1692,26 +1714,54 @@
             width: 100%;
             gap: 20px;
 
+            @media (max-width: 638px) {
+              gap: 5px;
+              width: 80%;
+            }
+
             input {
               padding: 16px;
+
+              @media (max-width: 638px) {
+                width: 100%;
+              }
+
+              @media (max-width: 1160px) {
+                padding: 12px;
+              }
             }
           }
 
           input {
             width: 100%;
             padding: 16px;
-          }
 
-                    button {
-                      background-color: #000000;
-                      color: #f2f2f2;
-                      padding: 20px;
-                      box-shadow: none;
-                      border: none;
-                      font-size: 24px;
-                      margin-top: 5px;
-                      transition: 850ms;
-                    }
+            @media (max-width: 638px) {
+              width: 80%;
+            }
+
+            @media (max-width: 1160px) {
+              padding: 12px;
+            }
+          }
+          button {
+            background-color: #000000;
+            color: #f2f2f2;
+            padding: 20px;
+            box-shadow: none;
+            border: none;
+            font-size: 24px;
+            margin-top: 5px;
+            transition: 850ms;
+
+            @media (max-width: 638px) {
+              width: 80%;
+              font-size: 14px;
+            }
+            @media (max-width: 1160px) {
+              padding: 14px;
+            }
+          }
         }
       }
     }
