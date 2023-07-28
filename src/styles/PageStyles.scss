@@ -1662,40 +1662,49 @@
   justify-content: space-between;
 
   .contact-section {
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
 
     .contact-us {
       display: flex;
-      flex-direction: column;
+      margin-bottom: 50px;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
 
-      
-
+      @media (max-width: 1140px) {
+        flex-direction: column;
+      }
 
       img {
-        @media (max-width: 1160px) {
-          width: 80%;
+        height: 650px;
+        width: 900px;
+        padding-right: 40px;
+
+        @media (max-width: 1140px) {
+          width: 50%;
           height: 30vw;
-          
+
         }
       }
 
       .contact-txt {
-
-        padding: 20px;
+        padding-top: 20px;
 
         h1 {
-          font-size: 24px;
+          font-size: 26px;
 
-          @media (max-width:638px){
-          padding: 5px 30px;
+          @media (max-width:638px) {
+            padding: 5px 30px;
           }
-          @media (max-width: 1160px) {
-            font-size: 18px;
+
+          @media (max-width: 1028px) {
+            padding: 5px 50px;
+          }
+
+          @media (max-width: 1140px) {
+            font-size: 20px;
+            padding-top: 10px;
           }
         }
 
@@ -1719,10 +1728,22 @@
               width: 80%;
             }
 
+            @media (max-width: 1028px) {
+              gap: 5px;
+              width: 70%;
+            }
+
             input {
-              padding: 16px;
+              padding: 12px;
+              outline: 0;
+              font-size: 16px;
 
               @media (max-width: 638px) {
+                width: 100%;
+              }
+
+              @media (max-width: 1028px) {
+                gap: 5px;
                 width: 100%;
               }
 
@@ -1735,40 +1756,46 @@
           input {
             width: 100%;
             padding: 16px;
+            font-size: 16px;
+            outline: 0;
 
             @media (max-width: 638px) {
               width: 80%;
+            }
+
+            @media (max-width: 1028px) {
+              gap: 5px;
+              width: 70%;
             }
 
             @media (max-width: 1160px) {
               padding: 12px;
             }
           }
+
           button {
             background-color: #000000;
             color: #f2f2f2;
-            padding: 20px 185px;
-            box-shadow: none;
+            padding: 16px 80px;
             border: none;
             font-size: 18px;
             margin-top: 5px;
             transition: 850ms;
-
-            @media (max-width: 638px) {
-              width: 80%;
-              font-size: 14px;
-            }
-            @media (max-width: 1160px) {
-              padding: 14px;
-            }
           }
+
           textarea {
-            width: 100%;
             height: 150px;
+            width: 500px;
             resize: none;
             outline: 0;
+
             
-            &::placeholder{
+            @media (max-width: 1028px) {
+              gap: 5px;
+              width: 60%;
+            }
+
+            &::placeholder {
               padding: 10px;
               font-size: 16px;
             }
