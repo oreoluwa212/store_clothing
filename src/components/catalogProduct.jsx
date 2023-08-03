@@ -1,13 +1,11 @@
-import React from "react";
-import Footer from "./Footer";
-import Catalogue from "./catalogue.jsx";
-import NavBar2 from "./NavBar2.jsx";
-
+import Footer from './Footer';
+import NavBar from './NavBar';
+import Catalogue from './catalogue.jsx';
 
 const Catalog = () => {
   return (
     <div>
-      <NavBar2 />
+      <NavBar />
       <Catalogue />
       <Footer />
     </div>

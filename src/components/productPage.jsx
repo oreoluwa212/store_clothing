@@ -1,14 +1,12 @@
-import React from "react";
-import Footer from "./Footer";
-import Product from "./product"
-import NavBar2 from "./NavBar2.jsx";
-import Featured from "./Featured";
+import Footer from './Footer';
+import Product from './product';
+import Featured from './Featured';
+import NavBar from './NavBar';
 
-
-const Catalog = () => {
+const ProductPage = () => {
   return (
     <div>
-      <NavBar2 />
+      <NavBar />
       <Product />
       <Featured />
       <Footer />
@@ -16,4 +14,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default ProductPage;

@@ -1,7 +1,6 @@
-import React from "react";
-import "../App";
-import productimg1 from "../assets/images/img4.png"
-import productimg2 from "../assets/images/img5.png"
+import '../styles/PageStyles.scss';
+import productimg1 from '../assets/images/product-img1.jpg';
+import productimg2 from '../assets/images/product-img2.jpg';
 
 const Product = () => {
   return (
@@ -12,20 +11,22 @@ const Product = () => {
         </h1>
       </div>
       <div className="photos">
-        <div className="gallery">
-          <div className="imgs">
-            <img src={productimg1} height={150} alt="" />
-            <img src={productimg2} height={150} alt="" />
-            <img src={productimg1} height={150} alt="" />
-            <img src={productimg2} height={150} alt="" />
-            <img src={productimg1} height={150} alt="" />
-            <img src={productimg2} height={150} alt="" />
+        <div className="group1">
+          <div className="gallery">
+            <div className="imgs">
+              <img src={productimg1} alt="" />
+              <img src={productimg2} alt="" />
+              <img src={productimg1}  alt="" />
+              <img src={productimg2} alt="" />
+              <img src={productimg1} alt="" />
+              <img src={productimg2} alt="" />
+            </div>
           </div>
-        </div>
 
-        <div className="big-frame">
-          <img src={productimg1} width={1000} height={900} alt="" />
-          <img src={productimg2} width={1000} height={1000} alt="" />
+          <div className="big-frame">
+            <img src={productimg1} alt="" />
+            <img src={productimg2} className='big-frame-img' alt="" />
+          </div>
         </div>
 
         <div className="details">
@@ -127,4 +128,4 @@ const Product = () => {
   );
 };
 
-export default Product
+export default Product;
