@@ -1,22 +1,22 @@
 import googleImg from '../assets/images/google.png';
 
-const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
+const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
   return (
     <div className="login-wrapper">
       <div className="login-container">
         <div className="login-section">
           <div className="logo-text">
-            <h1 onClick={() => setOpenLoginModal(false)}>X</h1>
+            <h1 onClick={() => setOpenSignUpModal(false)}>X</h1>
           </div>
 
           <div className="login-style">
             <div className="log-in">
-              <h1>Log In</h1>
+              <h1>Sign Up</h1>
               <p>Enter your credentials to access your account</p>
               <div className="button-div">
                 <button>
                   <img src={googleImg} alt="" />
-                  <h3>Log in with google</h3>
+                  <h3>Sign Up with google</h3>
                 </button>
               </div>
 
@@ -47,12 +47,12 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                   <button>Login</button>
 
                   <p>
-                    Not a member?{' '}
+                    Already have an account?{' '}
                     <span
-                      onClick={onClickOpenSignup}
+                      onClick={onClickOpenLogIn}
                       style={{ cursor: 'pointer' }}
                     >
-                      Sign up
+                      Log In
                     </span>
                   </p>
                 </div>
@@ -65,4 +65,4 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
   );
 };
 
-export default Login;
+export default SignUp;
