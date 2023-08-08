@@ -8,39 +8,41 @@ import {
   faMagnifyingGlass,
   faXmark,
   faLock,
-  faX,
+  // faX,
 } from '@fortawesome/free-solid-svg-icons';
 import Login from './login';
+import SignUp from './SignUp';
 
 const NavBar = () => {
   // UseState for opening the Drawer
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  // UseState for opening the Login Modal
-  const [openLoginModal, setLoginModal] = useState(false);
+  // UseState for opening the Login  and signup Modal
+  const [openLoginModal, setOpenLoginModal] = useState(false);
+  const [openSignUpModal, setOpenSignUpModal] = useState(false);
 
-  // UseState for opening the Signup Modal
-  const [openSignUpModal, setSignUpModal] = useState(false);
-
-  //Onclick funtion handling Open Drawer
+  //Onclick function handling Open Drawer
   const onClickMenu = () => {
     setOpenDrawer(true);
   };
 
-  //Onclick funtion handling Close Drawer
+  //Onclick function handling Close Drawer
   const handleClose = () => {
     setOpenDrawer(false);
   };
 
-  //Onclick funtion handling SignUp
-  const onClickSignUp = () => {
-    setSignUpModal(true);
+  // Onclick function handling LogIn
+  const onClickOpenLogIn = () => {
+    setOpenSignUpModal(false);
+    setOpenLoginModal(true);
   };
 
-  //Onclick funtion handling LogIn
-  const onClickLogIn = () => {
-    setLoginModal(true);
+  // Onclick function handling LogIn
+  const onClickOpenSignup = () => {
+    setOpenLoginModal(false);
+    setOpenSignUpModal(true);
   };
+
   return (
     <div className="nav-container">
       <div className="nav-menu">Free Shipping On All U.S Orders</div>
@@ -71,12 +73,7 @@ const NavBar = () => {
             </a>
           </Link>
           <Link to={''}>
-            <a
-              href="#"
-              onClick={() => {
-                setLoginModal(true);
-              }}
-            >
+            <a href="#" onClick={onClickOpenLogIn}>
               Account
             </a>
           </Link>
@@ -144,7 +141,18 @@ const NavBar = () => {
         </div>
       )}
 
-      {openLoginModal && <Login closeLoginModal={setLoginModal} />}
+      {openLoginModal && (
+        <Login
+          setOpenLoginModal={setOpenLoginModal}
+          onClickOpenSignup={onClickOpenSignup}
+        />
+      )}
+      {openSignUpModal && (
+        <SignUp
+          setOpenSignUpModal={setOpenSignUpModal}
+          onClickOpenLogIn={onClickOpenLogIn}
+        />
+      )}
     </div>
   );
 };

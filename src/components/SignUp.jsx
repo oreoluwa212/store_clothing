@@ -1,20 +1,12 @@
-import googleImg from "../assets/images/google.png";
-import { useState } from "react";
+import googleImg from '../assets/images/google.png';
 
-
-// UseState for opening the Login Modal
-// const [openLoginModal, setLoginModal] = useState(false);
-
-// const onClickLogIn = () => {
-//   setLoginModal(true);
-// };
-const SignUp = ({ closeSignUpModal }) => {
+const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
   return (
     <div className="login-wrapper">
       <div className="login-container">
         <div className="login-section">
           <div className="logo-text">
-            <h1 onClick={() => closeSignUpModal(false)}>X</h1>
+            <h1 onClick={() => setOpenSignUpModal(false)}>X</h1>
           </div>
 
           <div className="login-style">
@@ -55,7 +47,13 @@ const SignUp = ({ closeSignUpModal }) => {
                   <button>Login</button>
 
                   <p>
-                    Already have an account? <span>Log In</span>
+                    Already have an account?{' '}
+                    <span
+                      onClick={onClickOpenLogIn}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      Log In
+                    </span>
                   </p>
                 </div>
               </div>
