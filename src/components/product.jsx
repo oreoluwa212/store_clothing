@@ -1,47 +1,64 @@
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/PageStyles.scss';
-import productimg1 from '../assets/images/product-img1.jpg';
-import productimg2 from '../assets/images/product-img2.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCube } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
-const Product = () => {
+const Product = ({ selectedProduct }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // console.log('first', selectedProduct);
+  console.log('product', location);
+
   return (
     <>
       <div className="Parks2">
         <h1 className="home">
-          Home | Clothing | View All <span>| Marigold Trouser</span>
+          <span onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+            Home
+          </span>{' '}
+          <span
+            onClick={() => navigate('/catalog')}
+            style={{ cursor: 'pointer' }}
+          >
+            | Clothing | View All
+          </span>{' '}
+          | Marigold Trouser
         </h1>
       </div>
       <div className="photos">
         <div className="group1">
           <div className="gallery">
             <div className="imgs">
-              <img src={productimg1} alt="" />
-              <img src={productimg2} alt="" />
-              <img src={productimg1}  alt="" />
-              <img src={productimg2} alt="" />
-              <img src={productimg1} alt="" />
-              <img src={productimg2} alt="" />
+              <img src={selectedProduct?.img} alt="" />
+              <img src={selectedProduct?.img} alt="" />
+              <img src={selectedProduct?.img} alt="" />
+              <img src={selectedProduct?.img} alt="" />
+              <img src={selectedProduct?.img} alt="" />
+              <img src={selectedProduct?.img} alt="" />
             </div>
           </div>
 
           <div className="big-frame">
-            <img src={productimg1} alt="" />
-            <img src={productimg2} className='big-frame-img' alt="" />
+            <img src={selectedProduct?.img} alt="" />
+            <img src={selectedProduct?.img} className="big-frame-img" alt="" />
           </div>
         </div>
 
         <div className="details">
           <div className="marigold">
             <div>
-              <i class="fa-regular fa-heart"></i>
-              <h2>Marigold Trouser</h2>
+              <FontAwesomeIcon icon={faHeart} />
+              <h2>{selectedProduct?.name}</h2>
             </div>
 
             <div className="maria">
-              <h3>$78.00</h3>
+              <h3>${selectedProduct?.price}</h3>
             </div>
           </div>
           <div className="old">
-            <h4>$80.00</h4>
+            <h4>${selectedProduct?.old_price}</h4>
           </div>
           <div className="hr">
             <hr />
@@ -112,7 +129,7 @@ const Product = () => {
               <div className="bag">
                 <h2>30% off the original price</h2>
                 <div className="shipping">
-                  <i class="fa-solid fa-cube"></i>
+                  <FontAwesomeIcon icon={faCube} />
                   <h2>Free Shipping On All U.S. Orders </h2>
                   <a href="#">details</a>
                 </div>

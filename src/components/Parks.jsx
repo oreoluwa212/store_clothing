@@ -7,7 +7,7 @@ const Parks = () => {
     <div className="parks-section">
       <div className="parks">
         <h1>PARKS AND RECREATION</h1>
-        <a href="#">SHOP NEW</a>
+        <a href={'/catalog'}>SHOP NEW</a>
       </div>
 
       <div className="img-section">
@@ -17,7 +17,7 @@ const Parks = () => {
           <div className="lean-in">
             <h1>LEANING IN</h1>
             <div>
-              <a href="#">SHOP DRESSES</a>
+              <a href={'/catalog'}>SHOP DRESSES</a>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@ const Parks = () => {
           <div className="lean-in">
             <h1>ALL OVER VELVET</h1>
             <div>
-              <a href="#">SHOP BACK-IN-STOCK</a>
+              <a href={'/catalog'}>SHOP BACK-IN-STOCK</a>
             </div>
           </div>
         </div>

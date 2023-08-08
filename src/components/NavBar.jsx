@@ -50,13 +50,13 @@ const NavBar = () => {
       <div className="nav-items">
         <div className="first">
           <Link to={'/catalog'}>
-            <a href="#">Shop</a>
+            <a>Shop</a>
           </Link>
           <Link to={'/about-us'}>
-            <a href="#">About Us</a>
+            <a>About Us</a>
           </Link>
           <Link to={'/contact-us'}>
-            <a href="#">Contact Us</a>
+            <a>Contact Us</a>
           </Link>
         </div>
 
@@ -68,18 +68,16 @@ const NavBar = () => {
 
         <div className="second">
           <Link to={'/product'}>
-            <a className="active" href="#">
+            <a className="active">
               Search <FontAwesomeIcon icon={faMagnifyingGlass} />
             </a>
           </Link>
           <Link to={''}>
-            <a href="#" onClick={onClickOpenLogIn}>
-              Account
-            </a>
+            <a onClick={onClickOpenLogIn}>Account</a>
           </Link>
 
           <Link to={'/items-bag'}>
-            <a href="#">
+            <a>
               Bag <FontAwesomeIcon icon={faLock} />
             </a>
           </Link>
@@ -112,16 +110,14 @@ const NavBar = () => {
 
           <div className="first">
             <Link to={'/product'}>
-              <a className="active" href="#">
-                New Arrivals
-              </a>
+              <a className="active">New Arrivals</a>
             </Link>
 
             <Link to={'/catalog'}>
-              <a href="#">Shop</a>
+              <a>Shop</a>
             </Link>
             <Link to={'/about-us'}>
-              <a href="#">About Us</a>
+              <a>About Us</a>
             </Link>
           </div>
 
@@ -130,10 +126,10 @@ const NavBar = () => {
               Search <FontAwesomeIcon icon={faMagnifyingGlass} />
             </a>
 
-            <a href="#">Account</a>
+            <a onClick={onClickOpenLogIn}>Account</a>
 
             <Link to={'/items-bag'}>
-              <a href="#">
+              <a>
                 Bag <FontAwesomeIcon icon={faLock} />
               </a>
             </Link>
