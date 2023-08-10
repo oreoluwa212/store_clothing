@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 import '../styles/PageStyles.scss';
 import img4 from '../assets/images/product-img5.png';
 import img5 from '../assets/images/prodimg3.png';
 import img6 from '../assets/images/product-img3.png';
 import img8 from '../assets/images/prodimg6.png';
-import Product from './product';
 
 const productDetails = [
   {
@@ -41,67 +39,48 @@ const productDetails = [
 
 const Featured = () => {
   const navigate = useNavigate();
-  const [featured, setFeatured] = useState(true);
-
-  const [productPage, setProductPage] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState();
-
-  const handleProduct = (product) => {
-    setFeatured(false);
-    setProductPage(true);
-    setSelectedProduct(product);
-    navigate('/product', { state: product });
-    console.log('first', product);
-  };
 
   return (
-    <>
-      {featured && (
-        <div className="featured-section">
-          <div className="fey">
-            <h1>FEATURED</h1>
-          </div>
+    <div className="featured-section">
+      <div className="fey">
+        <h1>FEATURED</h1>
+      </div>
 
-          <div className="img-section2">
-            {productDetails.map((product, index) => {
-              return (
-                <div
-                  className="manual"
-                  key={index}
-                  id={product.id}
-                  // onClick={() => handleProduct(product)}
-                  onClick={() =>
-                    navigate('/product', {
-                      state: {
-                        id: product.id,
-                        name: product.name,
-                        price: product.price,
-                        old_price: product.old_price,
-                        img: product.img,
-                      },
-                    })
-                  }
-                  style={{ cursor: 'pointer' }}
-                >
-                  <img src={product?.img} alt="" />
+      <div className="img-section2">
+        {productDetails.map((product, index) => {
+          return (
+            <div
+              className="manual"
+              key={index}
+              id={product.id}
+              onClick={() =>
+                navigate('/product', {
+                  state: {
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    old_price: product.old_price,
+                    img: product.img,
+                  },
+                })
+              }
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={product?.img} alt="" />
 
-                  <div>
-                    <h1>{product?.name}</h1>
-                    <h2>${product?.price}</h2>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+              <div>
+                <h1>{product?.name}</h1>
+                <h2>${product?.price}</h2>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
-          <div className="btn-3">
-            <button onClick={() => navigate('/catalog')}>& More New</button>
-          </div>
-        </div>
-      )}
-
-      {productPage && <Product selectedProduct={selectedProduct} />}
-    </>
+      <div className="btn-3">
+        <button onClick={() => navigate('/catalog')}>& More New</button>
+      </div>
+    </div>
   );
 };
 

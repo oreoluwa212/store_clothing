@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Product from './product';
 
 import '../styles/PageStyles.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -64,66 +62,60 @@ const productDetails = [
 
 const Catalogue = () => {
   const navigate = useNavigate();
-  const [catalog, setCatalog] = useState(true);
-
-  const [productPage, setProductPage] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState();
-
-  const handleProduct = (product) => {
-    setCatalog(false);
-    setProductPage(true);
-    setSelectedProduct(product);
-    navigate('/product');
-  };
 
   return (
-    <>
-      {catalog && (
-        <div className="catalog-wrapper">
-          <div className="Parks1">
-            <Link to={'/'}>
-              <div>Home</div>
-            </Link>
-            <span>| Catalog</span>
+    <div className="catalog-wrapper">
+      <div className="Parks1">
+        <Link to={'/'}>
+          <div>Home</div>
+        </Link>
+        <span>| Catalog</span>
+      </div>
+
+      <div className="array">
+        <div className="num">283 Products</div>
+
+        <div className="sort">
+          <div>
+            View <FontAwesomeIcon icon={faAngleDown} />
           </div>
-
-          <div className="array">
-            <div className="num">283 Products</div>
-
-            <div className="sort">
-              <div>
-                View <FontAwesomeIcon icon={faAngleDown} />
-              </div>
-              <div>
-                Sort By <FontAwesomeIcon icon={faAngleDown} />
-              </div>
-            </div>
-          </div>
-
-          <div className="catalog-section">
-            {productDetails.map((product, index) => {
-              return (
-                <div
-                  className="img1"
-                  key={index}
-                  id={product.id}
-                  onClick={() => handleProduct(product)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  <img src={product.img} alt="" />
-                  <div className="lean-in">
-                    <h1>{product.name}</h1>
-                    <h2>${product.price}</h2>
-                  </div>
-                </div>
-              );
-            })}
+          <div>
+            Sort By <FontAwesomeIcon icon={faAngleDown} />
           </div>
         </div>
-      )}
+      </div>
 
-      {productPage && <Product selectedProduct={selectedProduct} />}
-    </>
+      <div className="catalog-section">
+        {productDetails.map((product, index) => {
+          return (
+            <div
+              className="img1"
+              key={index}
+              id={product.id}
+              // onClick={() => handleProduct(product)}
+              onClick={() =>
+                navigate('/product', {
+                  state: {
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    old_price: product.old_price,
+                    img: product.img,
+                  },
+                })
+              }
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={product.img} alt="" />
+              <div className="lean-in">
+                <h1>{product.name}</h1>
+                <h2>${product.price}</h2>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 

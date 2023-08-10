@@ -67,11 +67,9 @@ const NavBar = () => {
         </div>
 
         <div className="second">
-          <Link to={'/product'}>
-            <a className="active">
-              Search <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </a>
-          </Link>
+          <a className="active">
+            Search <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </a>
           <Link to={''}>
             <a onClick={onClickOpenLogIn}>Account</a>
           </Link>
