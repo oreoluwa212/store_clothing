@@ -63,13 +63,6 @@ const ItemsBag = () => {
           <input className="state" type="text" placeholder="State/Province" />
           <h2>Zip/Postal Code</h2>
           <input className="state" type="text" placeholder="2100038" />
-          <h2>Zip/Postal Code</h2>
-          <div className="postal">
-            <input type="radio" checked />
-            <div>
-              <label>Brooklyn, NY (198 Smith Street)</label>
-            </div>
-          </div>
           <hr />
           <div className="total">
             <div className="subtotal">

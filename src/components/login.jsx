@@ -1,5 +1,5 @@
 import googleImg from "../assets/images/google.png";
-import { dataBase } from "../firebase.config";
+import { dataBase } from "../../firebase.config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
