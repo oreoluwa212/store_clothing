@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/PageStyles.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCube } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Product = () => {
   const navigate = useNavigate();
