@@ -1,98 +1,46 @@
 import googleImg from "../assets/images/google.png";
 import { dataBase } from "../../firebase.config";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
-
-import { doc, setDoc, getDoc, serverTimestamp } from "firebase/firestore";
-
-import { toast } from "react-toastify";
 
 const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const userRef = useRef();
+  const errRef = useRef();
 
-  const { email, password } = formData;
+  const [user, setUser] = useState('');
+  const [pwd, setPwd] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  const [success, setSuccess] = useState(false);
 
-  const onChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.id]: e.target.value,
-    }));
-  };
+  useEffect(()=>{
+    userRef.current.focus();
+  }, [])
 
-  const onSubmit = async (e) => {
+  useEffect(()=>{
+    setErrMsg('');
+  }, [user,pwd])
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const auth = getAuth();
-      const existingUser = await getDoc(doc(dataBase, "users", email));
-
-      if (!existingUser.exists()) {
-        // Create a new account
-        const userCredential = await createUserWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
-        const formDataCopy = { ...formData };
-        delete formDataCopy.password;
-        formDataCopy.timestamp = serverTimestamp();
-
-        await setDoc(
-          doc(dataBase, "users", userCredential.user.uid),
-          formDataCopy
-        );
-        navigate("/");
-        toast.success("Account creation and login were successful!");
-      } else {
-        try {
-          // Sign in the user
-          await signInWithEmailAndPassword(auth, email, password);
-          navigate("/");
-          toast.success("Login was successful!");
-        } catch (error) {
-          // Handle the error when signing in with existing email
-          toast.error("Account exists already.");
-        }
-      }
-    } catch (error) {
-      toast.error("Something went wrong");
-    }
-  };
-
-  const onGoogleClick = async () => {
-    try {
-      const auth = getAuth();
-      const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-
-      // check for user
-      const docRef = doc(dataBase, "users", user.uid);
-      const docSnap = await getDoc(docRef);
-      if (!docSnap.exists()) {
-        await setDoc(doc(dataBase, "users", user.uid), {
-          name: user.displayName,
-          email: user.email,
-          timestamp: serverTimestamp(),
-        });
-      }
-      navigate("/");
-      toast.success("Login was successful!");
-    } catch (error) {
-      toast.error("Could not authorize with Google.");
-    }
-  };
-
+    console.log(user, pwd);
+    setUser('');
+    setPwd('');
+    setSuccess(true);
+  }
   return (
-    <div className="login-wrapper">
+    <>
+    {success ? (
+      <div>
+        {/* <h1>You are logged in</h1>
+        <br />
+        <p>
+          <a href="#">Go to Home</a>
+        </p> */}
+      </div>
+    ): (
+      <div className="login-wrapper">
+      <p ref={errRef} className={errMsg ? "errMsg": "offscreen"} aria-live="assertive">{errMsg}</p>
       <div className="login-container">
         <div className="login-section">
           <div className="logo-text">
@@ -106,7 +54,7 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
               <div className="button-div">
                 <button>
                   <img src={googleImg} alt="" />
-                  <h3 onClick={onGoogleClick}> Log in with google</h3>
+                  <h3> Log in with google</h3>
                 </button>
               </div>
 
@@ -116,27 +64,31 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                 <hr />
               </div>
 
-              <div className="form-place">
+              <form onSubmit={handleSubmit} className="form-place">
                 <div className="email">
-                  <label htmlFor="">Email address</label>
+                  <label htmlFor="username">Username:</label>
                   <input
                     type="text"
-                    id="email"
-                    value={email}
-                    onChange={onChange}
-                    placeholder="yourname@gmail.com"
+                    id="username"
+                    ref={userRef}
+                    value={user}
+                    autoComplete="off"
+                    onChange={(e)=> setUser(e.target.value)}
+                    required
+                    placeholder="yourname"
                   />
                 </div>
                 <div className="password">
                   <div className="forgot-password">
-                    <label htmlFor="">Password</label>
+                    <label htmlFor="password">Password</label>
                     <h4>Forgot password?</h4>
                   </div>
                   <input
                     type="password"
-                    value={password}
-                    onChange={onChange}
+                    value={pwd}
                     id="password"
+                    onChange={(e)=> setPwd(e.target.value)}
+                    required
                     placeholder="smaTiger21@"
                   />
                 </div>
@@ -146,7 +98,7 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                 </div>
 
                 <div className="login-btn">
-                  <button onClick={onSubmit}>Login</button>
+                  <button>Login</button>
 
                   <p>
                     Not a member?{" "}
@@ -158,12 +110,14 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                     </span>
                   </p>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
+    )}
+    </>
   );
 };
 
