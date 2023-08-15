@@ -58,14 +58,14 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
 
               <form onSubmit={handleSubmit} className="form-place">
                 <div className="email">
-                  <label htmlFor="username">Email address</label>
+                  <label htmlFor="email">Email address</label>
                   <input
                     type="email"
                     value={email}
                     autoComplete="off"
                     onChange={(e)=> setEmail(e.target.value.toLocaleLowerCase())}
                     required
-                    placeholder="Your email"
+                    placeholder="input email here"
                   />
                 </div>
                 <div className="password">
