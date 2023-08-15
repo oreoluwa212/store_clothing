@@ -39,17 +39,17 @@ const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
                 <hr />
               </div>
 
-              <div className="form-place">
+              <form className="form-place" onSubmit={handleSubmit}>
                 <div className="email">
                   <label htmlFor="">Email address</label>
-                  <input type="text" placeholder="yourname@gmail.com" />
+                  <input type="text" placeholder="yourname@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 </div>
                 <div className="password">
                   <div className="forgot-password">
                     <label htmlFor="">Password</label>
                     <h4>Forgot password?</h4>
                   </div>
-                  <input type="text" placeholder="smaTiger21@" />
+                  <input type="text" placeholder="smaTiger21@" value={pwd} onChange={(e) => setPwd(e.target.value)}/>
                 </div>
                 <div className="checkbox">
                   <input type="checkbox" />
@@ -69,7 +69,7 @@ const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
                     </span>
                   </p>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
