@@ -42,10 +42,10 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
               <h1>Log In</h1>
               <p>Enter your credentials to access your account</p>
               <div className="button-div">
-                <button>
+                <div>
                   <img src={googleImg} alt="" />
                   <h3> Log in with google</h3>
-                </button>
+                </div>
               </div>
 
               <div className="or-">
