@@ -11,6 +11,8 @@ import Product from './components/productPage';
 import About from './components/About';
 import Contact from './components/Contact';
 import ItemsBag from './components/ItemsBag';
+// import Login from './components/login';
+
 
 
 function App() {
@@ -19,8 +21,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          {/* <Route path="/" element={<Login />} /> */}
           <Route path="/about-us" element={<About />} />
-
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/product" element={<Product />} />
           <Route path='/contact-us' element={<Contact/>}/>

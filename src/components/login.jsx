@@ -1,22 +1,35 @@
 import googleImg from "../assets/images/google.png";
-import { dataBase } from "../../firebase.config";
-import { useState, useRef, useEffect } from "react";
+
+import { signInWithEmailAndPassword } from "firebase/auth";
+import React, { useState, useRef, useEffect } from "react";
+import { auth } from "../../firebase.config";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 
 const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
-  const [user, setUser] = useState("");
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await dataBase.signInWithEmailAndPassword(user, pwd);
-      // Handle successful login, e.g., redirect or update state
-    } catch (error) {
-      setErrMsg("Login failed. Please check your credentials.");
-    }
+       e.preventDefault();
+       try {
+        await signInWithEmailAndPassword(auth, email, pwd)
+         .then((userCredential) => {
+           // Signed in
+           const user = userCredential.user;
+           console.log(user);
+           navigate("/catalog");
+           toast.success("Login successful!");
+         })
+         
+       } catch (error){
+        console.log(error);
+        toast.error("Something went wrong");
+       }
+       
   };
   return (
       <div className="login-wrapper">
@@ -45,15 +58,14 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
 
               <form onSubmit={handleSubmit} className="form-place">
                 <div className="email">
-                  <label htmlFor="username">Username:</label>
+                  <label htmlFor="username">Email address</label>
                   <input
-                    type="text"
-                    id="username"
-                    value={user}
+                    type="email"
+                    value={email}
                     autoComplete="off"
-                    onChange={(e)=> setUser(e.target.value)}
+                    onChange={(e)=> setEmail(e.target.value.toLocaleLowerCase())}
                     required
-                    placeholder="yourname"
+                    placeholder="Your email"
                   />
                 </div>
                 <div className="password">
@@ -76,7 +88,7 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                 </div>
 
                 <div className="login-btn">
-                  <button>Login</button>
+                  <button type="submit">Login</button>
 
                   <p>
                     Not a member?{" "}

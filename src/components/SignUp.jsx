@@ -1,18 +1,31 @@
+import React, {useState} from "react"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase.config";
 import googleImg from '../assets/images/google.png';
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await auth.createUserWithEmailAndPassword(email, pwd);
-      // Handle successful signup, e.g., redirect or update state
-    } catch (error) {
-      setErrMsg("Sign up failed. Please try again.");
-    }
+
+  try{
+    await createUserWithEmailAndPassword(auth, email, pwd)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log(user);
+      navigate("/catalog");
+      toast.success("Account creation successful!");
+    })
+  } catch (error) {
+    console.log(error);
+    toast.error("Something went wrong");
+  }
   };
   return (
     <div className="login-wrapper">
@@ -42,14 +55,14 @@ const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
               <form className="form-place" onSubmit={handleSubmit}>
                 <div className="email">
                   <label htmlFor="">Email address</label>
-                  <input type="text" placeholder="yourname@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                  <input type="email" placeholder="yourname@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 </div>
                 <div className="password">
                   <div className="forgot-password">
                     <label htmlFor="">Password</label>
                     <h4>Forgot password?</h4>
                   </div>
-                  <input type="text" placeholder="smaTiger21@" value={pwd} onChange={(e) => setPwd(e.target.value)}/>
+                  <input type="password" placeholder="smaTiger21@" value={pwd} onChange={(e) => setPwd(e.target.value)}/>
                 </div>
                 <div className="checkbox">
                   <input type="checkbox" />
@@ -57,7 +70,7 @@ const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
                 </div>
 
                 <div className="login-btn">
-                  <button>SignUp</button>
+                  <button type='submit'>SignUp</button>
 
                   <p>
                     Already have an account?{' '}

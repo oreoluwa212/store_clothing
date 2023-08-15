@@ -1,21 +1,18 @@
 import { initializeApp } from "firebase/app";
-
-import { getFirestore } from "firebase/firestore";
-
-
-import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyCrYGbgGhoHM-gQuflG_KC4W3-HrFBcSNA",
-  authDomain: "participle-79e16.firebaseapp.com",
-  projectId: "participle-79e16",
-  storageBucket: "participle-79e16.appspot.com",
-  messagingSenderId: "551659580725",
-  appId: "1:551659580725:web:fd0892d8d3d28e6ff4b07c",
-  measurementId: "G-97NW45P65W"
+  apiKey: "AIzaSyCcm7tP7vlRAJTIoZCi1CrNcIL8vq3JPpE",
+  authDomain: "participleplus.firebaseapp.com",
+  projectId: "participleplus",
+  storageBucket: "participleplus.appspot.com",
+  messagingSenderId: "120364592910",
+  appId: "1:120364592910:web:c25c44eb7a87b94769b15f",
+  measurementId: "G-G82BKQSH4F"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
-export const dataBase = getFirestore();
+// Initialize Firebase Authentication and get a reference to the service
+export const auth = getAuth(app);
+export default app;
