@@ -1,6 +1,19 @@
 import googleImg from '../assets/images/google.png';
 
 const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [errMsg, setErrMsg] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await auth.createUserWithEmailAndPassword(email, pwd);
+      // Handle successful signup, e.g., redirect or update state
+    } catch (error) {
+      setErrMsg("Sign up failed. Please try again.");
+    }
+  };
   return (
     <div className="login-wrapper">
       <div className="login-container">
