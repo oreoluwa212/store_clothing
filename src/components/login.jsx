@@ -6,7 +6,6 @@ import { auth } from "../../firebase.config";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-
 const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -14,25 +13,24 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
   const [errMsg, setErrMsg] = useState("");
 
   const handleSubmit = async (e) => {
-       e.preventDefault();
-       try {
-        await signInWithEmailAndPassword(auth, email, pwd)
-         .then((userCredential) => {
-           // Signed in
-           const user = userCredential.user;
-           console.log(user);
-           navigate("/catalog");
-           toast.success("Login successful!");
-         })
-         
-       } catch (error){
-        console.log(error);
-        toast.error("Something went wrong");
-       }
-       
+    e.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, email, pwd).then(
+        (userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+          navigate("/catalog");
+          toast.success("Login successful!");
+        }
+      );
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
   };
   return (
-      <div className="login-wrapper">
+    <div className="login-wrapper">
       <div className="login-container">
         <div className="login-section">
           <div className="logo-text">
@@ -63,7 +61,9 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                     type="email"
                     value={email}
                     autoComplete="off"
-                    onChange={(e)=> setEmail(e.target.value.toLocaleLowerCase())}
+                    onChange={(e) =>
+                      setEmail(e.target.value.toLocaleLowerCase())
+                    }
                     required
                     placeholder="input email here"
                   />
@@ -77,9 +77,9 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                     type="password"
                     value={pwd}
                     id="password"
-                    onChange={(e)=> setPwd(e.target.value)}
+                    onChange={(e) => setPwd(e.target.value)}
                     required
-                    placeholder="smaTiger21@"
+                    placeholder="smaTiger321@"
                   />
                 </div>
                 <div className="checkbox">
@@ -106,7 +106,6 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
         </div>
       </div>
     </div>
-
   );
 };
 

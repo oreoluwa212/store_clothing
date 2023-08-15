@@ -62,7 +62,7 @@ const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
                     <label htmlFor="">Password</label>
                     <h4>Forgot password?</h4>
                   </div>
-                  <input type="password" placeholder="smaTiger21@" value={pwd} onChange={(e) => setPwd(e.target.value)}/>
+                  <input type="password" placeholder="smaTiger321@" value={pwd} onChange={(e) => setPwd(e.target.value)}/>
                 </div>
                 <div className="checkbox">
                   <input type="checkbox" />
