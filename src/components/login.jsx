@@ -5,14 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 
 const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
-  const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       await dataBase.signInWithEmailAndPassword(user, pwd);
       // Handle successful login, e.g., redirect or update state
@@ -21,18 +19,7 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
     }
   };
   return (
-    <>
-    {success ? (
-      <div>
-        {/* <h1>You are logged in</h1>
-        <br />
-        <p>
-          <a href="#">Go to Home</a>
-        </p> */}
-      </div>
-    ): (
       <div className="login-wrapper">
-      <p ref={errRef} className={errMsg ? "errMsg": "offscreen"} aria-live="assertive">{errMsg}</p>
       <div className="login-container">
         <div className="login-section">
           <div className="logo-text">
@@ -62,7 +49,6 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                   <input
                     type="text"
                     id="username"
-                    ref={userRef}
                     value={user}
                     autoComplete="off"
                     onChange={(e)=> setUser(e.target.value)}
@@ -108,8 +94,7 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
         </div>
       </div>
     </div>
-    )}
-    </>
+
   );
 };
 
