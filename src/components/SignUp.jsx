@@ -57,7 +57,7 @@ const SignUp = ({ setOpenSignUpModal, onClickOpenLogIn }) => {
                 </div>
 
                 <div className="login-btn">
-                  <button>Login</button>
+                  <button>SignUp</button>
 
                   <p>
                     Already have an account?{' '}
