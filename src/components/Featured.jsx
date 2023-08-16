@@ -9,28 +9,28 @@ import img8 from '../assets/images/prodimg6.png';
 const productDetails = [
   {
     img: `${img4}`,
-    name: 'Flowers on Sleeves Dress',
+    name: "Polly Off Shoulder Dress",
     price: 115,
     old_price: 120,
     id: 8,
   },
   {
     img: `${img5}`,
-    name: 'Cat-Eye Resin Sunglasses in Clear',
+    name: "Mainet Blazer Jacket",
     price: 45,
     old_price: 50,
     id: 9,
   },
   {
     img: `${img8}`,
-    name: 'Notte Dot Dress',
+    name: "Kairos Button-up Shirt",
     price: 74,
     old_price: 78,
     id: 11,
   },
   {
     img: `${img6}`,
-    name: 'Marigold Trouser',
+    name: "Kairos Sleeveless Button-up Shirt",
     price: 78,
     old_price: 80,
     id: 12,

@@ -16,48 +16,60 @@ import img3 from '../assets/images/proImg2.png';
 const productDetails = [
   {
     img: `${img11}`,
-    name: 'Cat-Eye Resin Sunglasses in Clear',
+    name: "Mainet Blazer Jacket",
     price: 45,
     old_price: 50,
     id: 0,
   },
   {
     img: `${img22}`,
-    name: 'Marigold Trouser',
+    name: "Aunt Polly Red Dress",
     price: 78,
     old_price: 80,
     id: 1,
   },
   {
     img: `${img33}`,
-    name: 'Cat-Eye Resin Sunglasses in Clear',
+    name: "Kairos Botton-up Shirt",
     price: 45,
     old_price: 50,
     id: 2,
   },
   {
     img: `${img44}`,
-    name: 'Marigold Trouser',
+    name: "Vanessa Kain Blouse Top",
     price: 78,
     old_price: 80,
     id: 3,
   },
   {
     img: `${img55}`,
-    name: 'Cat-Eye Resin Sunglasses in Clear',
+    name: "Cottie Blanca Straight Gown",
     price: 45,
     old_price: 50,
     id: 4,
   },
-  { img: `${img5}`, name: 'Marigold Trouser', price: 78, old_price: 80, id: 5 },
+  {
+    img: `${img5}`,
+    name: "Polly Off Shoulder Dress",
+    price: 78,
+    old_price: 80,
+    id: 5,
+  },
   {
     img: `${img3}`,
-    name: 'Cat-Eye Resin Sunglasses in Clear',
+    name: "Venessa Kain Blouse Top",
     price: 45,
     old_price: 50,
     id: 6,
   },
-  { img: `${img1}`, name: 'Marigold Trouser', price: 78, old_price: 80, id: 7 },
+  {
+    img: `${img1}`,
+    name: "Kairos Sleeveless Button-up Shirt",
+    price: 78,
+    old_price: 80,
+    id: 7,
+  },
 ];
 
 const Catalogue = () => {

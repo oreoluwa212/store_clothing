@@ -883,8 +883,8 @@
         display: flex;
         cursor: pointer;
         align-items: center;
-        width: 570px;
-        height: 670px;
+        width: 470px;
+        height: 370px;
         transition: 850ms;
 
         @media (max-width: 1365px) {
@@ -1265,23 +1265,10 @@
     grid-template-columns: 4fr 3fr;
     gap: 10px;
     padding: 20px 7%;
-    max-width: 1950px;
-    // margin: 20px 10%;
 
-    @media (max-width: 740px) {
-      max-width: 600px;
-      grid-template-columns: 2fr 1fr;
-    }
 
-    @media (max-width: 919px) {
-      max-width: 800px;
-      grid-template-columns: 1fr 2fr;
-    }
-
-    @media (max-width: 1239px) {
-      display: flex;
-      flex-direction: row;
-      gap: 0px;
+    @media (max-width: 821px) {
+      grid-template-columns: 1fr;
     }
 
     .group1 {
