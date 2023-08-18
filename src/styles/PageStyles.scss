@@ -37,7 +37,7 @@
     .first,
     .second {
       display: flex;
-      gap: 70px;
+      gap: 50px;
       font-size: 20px;
       font-weight: 500;
       justify-content: space-between;
@@ -948,6 +948,16 @@
           }
         }
       }
+    }
+  }
+
+  .next-btn{
+    display: flex;
+    gap: 12px;
+
+    p{
+      font-weight: 700;
+      cursor: pointer;
     }
   }
 }

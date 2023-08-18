@@ -1,20 +1,22 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import '../styles/PageStyles.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "../styles/PageStyles.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faMagnifyingGlass,
   faXmark,
   faLock,
+  faX,
   // faX,
-} from '@fortawesome/free-solid-svg-icons';
-import Login from './login';
-import SignUp from './SignUp';
+} from "@fortawesome/free-solid-svg-icons";
+import Login from "./login";
+import SignUp from "./SignUp";
 
-const NavBar = () => {
+const NavBar = ({ setSearchValue, searchValue }) => {
   // UseState for opening the Drawer
+  const [openSearch, setOpenSearch] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
 
   // UseState for opening the Login  and signup Modal
@@ -37,7 +39,7 @@ const NavBar = () => {
     setOpenLoginModal(true);
   };
 
-  // Onclick function handling LogIn
+  // Onclick function handling SignUp
   const onClickOpenSignup = () => {
     setOpenLoginModal(false);
     setOpenSignUpModal(true);
@@ -49,32 +51,49 @@ const NavBar = () => {
 
       <div className="nav-items">
         <div className="first">
-          <Link to={'/catalog'}>
+          <Link to={"/catalog"}>
             <a>Shop</a>
           </Link>
-          <Link to={'/about-us'}>
+          <Link to={"/about-us"}>
             <a>About Us</a>
           </Link>
-          <Link to={'/contact-us'}>
+          <Link to={"/contact-us"}>
             <a>Contact Us</a>
           </Link>
         </div>
 
         <div className="participle-nav">
-          <Link to={'/'}>
+          <Link to={"/"}>
             <h1>Participle+</h1>
           </Link>
         </div>
 
         <div className="second">
-          <a className="active">
-            Search <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </a>
-          <Link to={''}>
+          {openSearch ? (
+            <div>
+              <input
+                type="search"
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
+              />
+              <FontAwesomeIcon
+                onClick={() => setOpenSearch((prev) => !prev)}
+                icon={faX}
+              />
+            </div>
+          ) : (
+            <a
+              onClick={() => setOpenSearch((prev) => !prev)}
+              className="active"
+            >
+              Search <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </a>
+          )}
+          <Link to={""}>
             <a onClick={onClickOpenLogIn}>Account</a>
           </Link>
 
-          <Link to={'/items-bag'}>
+          <Link to={"/items-bag"}>
             <a>
               Bag <FontAwesomeIcon icon={faLock} />
             </a>
@@ -84,7 +103,7 @@ const NavBar = () => {
 
       <div className="mobile-nav-container">
         <div className="participle-nav">
-          <Link to={'/'}>
+          <Link to={"/"}>
             <h1>Participle+</h1>
           </Link>
         </div>
@@ -101,20 +120,20 @@ const NavBar = () => {
           />
 
           <div className="participle-nav">
-            <Link to={'/'}>
+            <Link to={"/"}>
               <h1>Participle+</h1>
             </Link>
           </div>
 
           <div className="first">
-            <Link to={'/product'}>
+            <Link to={"/product"}>
               <a className="active">New Arrivals</a>
             </Link>
 
-            <Link to={'/catalog'}>
+            <Link to={"/catalog"}>
               <a>Shop</a>
             </Link>
-            <Link to={'/about-us'}>
+            <Link to={"/about-us"}>
               <a>About Us</a>
             </Link>
           </div>
@@ -126,7 +145,7 @@ const NavBar = () => {
 
             <a onClick={onClickOpenLogIn}>Account</a>
 
-            <Link to={'/items-bag'}>
+            <Link to={"/items-bag"}>
               <a>
                 Bag <FontAwesomeIcon icon={faLock} />
               </a>
