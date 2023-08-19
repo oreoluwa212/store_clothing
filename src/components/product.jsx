@@ -22,7 +22,7 @@ const Product = () => {
           >
             | Clothing | View All
           </span>{' '}
-          | Marigold Trouser
+          | {productInfo.name}
         </h1>
       </div>
       <div className="photos">
@@ -132,7 +132,22 @@ const Product = () => {
                   <a href="#">details</a>
                 </div>
                 <div className="Bag">
-                  <button>Add To Bag</button>
+                  <button
+                    onClick={() =>
+                      navigate('/items-bag', {
+                        state: {
+                          id: productInfo?.id,
+                          name: productInfo?.name,
+                          price: productInfo?.price,
+                          old_price: productInfo?.old_price,
+                          img: productInfo?.img,
+                        },
+                      })
+                    }
+                    style={{ cursor: 'pointer' }}
+                  >
+                    Add To Bag
+                  </button>
                 </div>
               </div>
             </div>

@@ -1,16 +1,16 @@
-import googleImg from "../assets/images/google.png";
+import googleImg from '../assets/images/google.png';
 
-import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useState, useRef, useEffect } from "react";
-import { auth } from "../../firebase.config";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import React, { useState, useRef, useEffect } from 'react';
+import { auth } from '../../firebase.config';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [pwd, setPwd] = useState("");
-  const [errMsg, setErrMsg] = useState("");
+  const [email, setEmail] = useState('');
+  const [pwd, setPwd] = useState('');
+  const [errMsg, setErrMsg] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,13 +20,13 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/catalog");
-          toast.success("Login successful!");
+          toast.success('Login successful!');
+          setOpenLoginModal(false);
         }
       );
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error('Something went wrong');
     }
   };
   return (
@@ -91,10 +91,10 @@ const Login = ({ setOpenLoginModal, onClickOpenSignup }) => {
                   <button type="submit">Login</button>
 
                   <p>
-                    Not a member?{" "}
+                    Not a member?{' '}
                     <span
                       onClick={onClickOpenSignup}
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: 'pointer' }}
                     >
                       Sign up
                     </span>
