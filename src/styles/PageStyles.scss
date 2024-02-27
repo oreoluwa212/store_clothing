@@ -1380,8 +1380,8 @@
             cursor: pointer;
             height: 120px;
 
-            @media (max-width: 420px) {
-              width: 45px;
+            @media (max-width: 480px) {
+              width: 100px;
               height: 80px;
             }
 
@@ -1405,8 +1405,8 @@
           width: 500px;
           height: 700px;
 
-          @media (max-width: 420px) {
-            width: 270px;
+          @media (max-width: 480px) {
+            width: 380px;
           }
 
           @media (max-width: 919px) {
@@ -1420,7 +1420,7 @@
           height: 400px;
         }
 
-        @media (max-width: 420px) {
+        @media (max-width: 480px) {
           width: 250px;
         }
       }
